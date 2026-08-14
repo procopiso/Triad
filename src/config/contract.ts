@@ -1,6 +1,6 @@
 import { zeroAddress, type Address } from 'viem'
 
-const deployedAddress = ''
+const deployedAddress = '0x8fede691B67c0D4664E307B5De49ef67f821Cdc1'
 const configuredAddress = import.meta.env.VITE_TRIAD_CONTRACT_ADDRESS
 const activeAddress = configuredAddress || deployedAddress
 
@@ -42,28 +42,4 @@ export const triadAbi = [
           { name: 'draws', type: 'uint64' },
           { name: 'checkIns', type: 'uint64' },
           { name: 'lastCheckInDay', type: 'uint64' },
-          { name: 'lastPlayedAt', type: 'uint64' },
-          { name: 'streak', type: 'uint16' },
-          { name: 'lastPlayerMove', type: 'uint8' },
-          { name: 'lastChainMove', type: 'uint8' },
-          { name: 'lastOutcome', type: 'uint8' },
-        ],
-      },
-    ],
-    stateMutability: 'view',
-  },
-  {
-    type: 'function',
-    name: 'globalRounds',
-    inputs: [],
-    outputs: [{ name: '', type: 'uint64' }],
-    stateMutability: 'view',
-  },
-  {
-    type: 'function',
-    name: 'globalCheckIns',
-    inputs: [],
-    outputs: [{ name: '', type: 'uint64' }],
-    stateMutability: 'view',
-  },
-] as const
+          { name: 'lastPlayedAt',
